@@ -6,7 +6,7 @@ import {Header,Postview} from "../PostView/postview"
 export default function Main() {
     const [users, setdata] = useState([])
     useEffect(() => {
-        axios.get("https://instaclone-10x-server.herokuapp.com/posts")
+        axios.get("http://localhost:5000/posts")
             .then(res => {
                 setdata(res.data)
             })
