@@ -18,7 +18,6 @@ const Post = () => {
     }]
     const navigate = useNavigate();
     const handlesubmit = () => {
-        console.log(post);
         axios({
             url:" https://instaclone-10x-server.herokuapp.com/post",
             method:"POST",
