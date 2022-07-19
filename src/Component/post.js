@@ -21,9 +21,6 @@ const Post = () => {
         axios({
             url:"https://insta-server-10.herokuapp.com/post",
             method:"POST",
-            headers:{
-
-            },
             data:post
         }).then((res)=>console.log(res)).catch((err)=>console.log(err))
         navigate("../main")
