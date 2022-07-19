@@ -20,7 +20,7 @@ const Post = () => {
     const handlesubmit = () => {
         console.log(post);
         axios({
-            url:"http://localhost:5000/post",
+            url:" https://instaclone-10x-server.herokuapp.com/post",
             method:"POST",
             headers:{
 
