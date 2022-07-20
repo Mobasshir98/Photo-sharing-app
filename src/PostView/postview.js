@@ -1,5 +1,5 @@
 import React from 'react'
-import {useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export function Header() {
     let navigate = useNavigate();
@@ -7,7 +7,10 @@ export function Header() {
         <>
             <div className="head">
                 <img width={200} src="https://cdn.icon-icons.com/icons2/2699/PNG/512/instagram_logo_icon_170643.png" alt="" />
-                <i className="bi bi-camera" onClick={()=>navigate("../post", { replace: true })} ></i>
+                <div className='camera'>
+                    <i className="bi bi-camera" onClick={() => navigate("../post", { replace: true })} ></i>
+                    <h6>Post</h6>
+                </div>
             </div>
         </>
     )

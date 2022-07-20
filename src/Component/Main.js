@@ -1,14 +1,17 @@
 import React from 'react'
-import { useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
-import {Header,Postview} from "../PostView/postview"
+import { Header, Postview } from "../PostView/postview"
+import * as ReactBootstrap from "react-bootstrap"
 
 export default function Main() {
     const [users, setdata] = useState([])
+    const [loading, setloading] = useState(true);
     useEffect(() => {
         axios.get(" https://instaclone-server-app.herokuapp.com/posts")
             .then(res => {
                 setdata(res.data)
+                setloading(false)
             })
             .catch(err => {
                 console.log(err)
@@ -23,6 +26,9 @@ export default function Main() {
                 )
             }
             )}
+            <div className="spinner">
+                {loading && (<ReactBootstrap.Spinner className='spinner' animation="border" variant="primary" />)}
+            </div>
         </>
     );
 }
