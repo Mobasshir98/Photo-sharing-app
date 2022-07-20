@@ -59,6 +59,9 @@ p{
   top: 165px;
   justify-content: space-around;
 }
+.image img {
+  object-fit: cover;
+}
 .enter{
   display: flex;
   flex-direction: column;
