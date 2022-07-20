@@ -52,6 +52,8 @@ p{
 }
 .description{
   margin: 17px 10px;
+}
+.description h5{
   word-wrap: break-word;
 }
 .landing{
