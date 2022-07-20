@@ -60,7 +60,7 @@ p{
   justify-content: space-around;
 }
 .image img {
-  object-fit: cover;
+  object-fit: contain;
 }
 .enter{
   display: flex;
