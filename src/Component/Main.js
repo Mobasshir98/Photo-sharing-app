@@ -17,7 +17,7 @@ export default function Main() {
     return (
         <>
             <Header />
-            {users.map((user) => {
+            {[...users].reverse().map((user) => {
                 return (
                     <Postview key={user._id} name={user.author} location={user.location} image={user.image} date={user.Date} likes={user.likes} description={user.description} />
                 )
