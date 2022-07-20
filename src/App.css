@@ -52,6 +52,7 @@ p{
 }
 .description{
   margin: 17px 10px;
+  word-wrap: break-word;
 }
 .landing{
   display: flex;
@@ -62,9 +63,7 @@ p{
 .image img {
   object-fit: contain;
 }
-.description h5{
-  object-fit: contain;
-}
+
 .enter{
   display: flex;
   flex-direction: column;
