@@ -37,9 +37,6 @@
   left: 65%;
   color: rgba(106,106,106,255);
 }
-.image img{
-  object-fit:fill
-}
 h5{
   margin: 0;
 }
