@@ -7,6 +7,7 @@ import FileBase64 from 'react-file-base64';
 
 
 
+
 const Post = () => {
     const [post, setpost] = useState({})
     const formdata = [{
@@ -19,10 +20,10 @@ const Post = () => {
     const navigate = useNavigate();
     const handlesubmit = () => {
         axios({
-            url:"https://instaclone-server-app.herokuapp.com/post",
-            method:"POST",
-            data:post
-        }).then((res)=>console.log(res)).catch((err)=>console.log(err))
+            url: "https://instaclone-server-app.herokuapp.com/post",
+            method: "POST",
+            data: post
+        }).then((res) => console.log(res)).catch((err) => console.log(err))
         navigate("../main")
 
     }
@@ -33,29 +34,32 @@ const Post = () => {
     return (
         <>
             <Header />
-            <div className='post-form'>
-            <FileBase64
-        multiple={ false }
-        onDone={ ({base64})=>setpost({...post,image:base64}) } />
-                <form>
-                    {
-                        formdata.map((data) => {
-                            return (
- 
-                                <div id={data.id}>
-                                    <div>
-                                        <label htmlFor={data.id}></label>
+            <div className="postbody">
+                <div className='center'>
+                    <h1>New Post</h1>
+                    <div className="input-file">
+                        <FileBase64
+                            type="file"
+                            multiple={false}
+                            onDone={({ base64 }) => setpost({ ...post, image: base64 })} />
+                    </div>
+                    <form>
+                        {
+                            formdata.map((data) => {
+                                return (
+                                    <div id={data.id}>
+                                        <div className='inputbox'>
+                                            <input type={data.type} placeholder={data.placeholder} onChange={(e) => { handlechange(e, data.id) }} />
+                                        </div>
                                     </div>
-                                    <div>
-                                        <input type={data.type} placeholder={data.placeholder}  onChange={(e) => { handlechange(e, data.id) }} />
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-
-                </form>
-                <button type='button' onClick={handlesubmit}>POST</button>
+                                )
+                            })
+                        }
+                        <div className="inputbox">
+                            <input type='button' value='POST' onClick={handlesubmit} />
+                        </div>
+                    </form>
+                </div>
             </div>
         </>
     )

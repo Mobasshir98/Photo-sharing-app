@@ -84,28 +84,88 @@ p{
   border-radius: 15px;
   box-shadow: 1px 1px 10px black;
 }
-.post-form{
-  width: 50vw;
-  margin: auto;
-  margin-top: 180px;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px black;
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+.postbody{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Sansita Swashed", cursive;
 }
-.post-form input{
-  font-size: 30px;
-  margin: 15px;
-}
-.post-form button{
-  width: 80px;
-  padding: 10px;
-  background-color: white;
-  border-radius: 10px;
-  font-size: larger;
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
+.center {
   position: relative;
-  margin: 15px;
+  padding: 50px 50px;
+  background: #fff;
+  border-radius: 10px;
+}
+.center h1 {
+  font-size: 2em;
+  border-left: 5px solid rgb(188, 68, 16);
+  padding: 10px;
+  color: #000;
+  letter-spacing: 5px;
+  margin-bottom: 60px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.center .inputbox {
+  position: relative;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 50px;
+}
+.center .inputbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
 }
 
+.center .inputbox [type="button"] {
+  width: 45%;
+  background: linear-gradient(45deg, purple, orange, red);
+  color: #fff;
+  border: #fff;
+  border-radius: 4px;
+  margin-top: -30px;
+  cursor: pointer;
+  font-size: small;
+  transition: all 1s ease;
+}
+.center .inputbox:hover [type="button"] {
+  background: #fff;
+  border: 2px solid #535353;
+  color: #000;
+}
+.input-file input[type="file" i]{
+  color: #878787;
+}
+.input-file input[type="file" i]::-webkit-file-upload-button{
+  background: linear-gradient(45deg, purple, orange, red);
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  outline: none;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  transition: all 1s ease;
+}
+.input-file input[type="file" i]::-webkit-file-upload-button:hover{
+
+background: #fff;
+  border: 2px solid #535353;
+  color: #000;
+}
 
