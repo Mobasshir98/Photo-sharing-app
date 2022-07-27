@@ -3,9 +3,7 @@ import { Header } from '../PostView/postview'
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import FileBase64 from 'react-file-base64';
-
-
+import FileBase64 from 'react-file-base64'
 
 
 const Post = () => {
