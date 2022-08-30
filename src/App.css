@@ -181,6 +181,34 @@ background: #fff;
   justify-content: center;
   align-items: center;
 }
+.paginationbtns {
+  width: 80%;
+  margin: auto;
+  /* border: 1px solid black; */
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 23px;
+
+}
+
+.paginationbtns a {
+  padding: 10px;
+  margin: 8px;
+  cursor: pointer;
+  color: grey;
+}
+
+.paginationbtns a:hover {
+  color: #2DA5FC;
+  background-color: whitesmoke
+}
+
+.paginationactive a {
+  color: #2DA5FC
+}
 @media screen and (max-width:768px) {
   .landing{
     flex-direction: column;
